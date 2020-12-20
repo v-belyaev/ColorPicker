@@ -105,7 +105,7 @@ extension ColorPickerViewController: UITextFieldDelegate {
             return true
         }
         
-        let allowedCharacters = CharacterSet(charactersIn: "0123456789.\\b")
+        let allowedCharacters = CharacterSet(charactersIn: "0123456789.")
         let characterSet = CharacterSet(charactersIn: string)
         return allowedCharacters.isSuperset(of: characterSet) && text.count < 4
     }
