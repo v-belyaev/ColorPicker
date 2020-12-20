@@ -8,9 +8,9 @@
 import UIKit
 
 final class BackgroundColorModel {
-    var redValue: CGFloat = 0.0
-    var greenValue: CGFloat = 0.0
-    var blueValue: CGFloat = 0.0
+    private(set) var redValue: CGFloat = 0.0
+    private(set) var greenValue: CGFloat = 0.0
+    private(set) var blueValue: CGFloat = 0.0
     
     init() {
         setRandomValues()
