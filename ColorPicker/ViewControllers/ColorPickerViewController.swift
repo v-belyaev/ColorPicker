@@ -134,15 +134,15 @@ extension ColorPickerViewController {
     private func updateModelFromSlidersValue(_ sender: UISlider) {
         switch sender {
         case redSlider:
-            model.setNewColor(red: CGFloat(sender.value)) { [weak self] in
+            model.setNewColorFrom(red: CGFloat(sender.value)) { [weak self] in
                 self?.updateUI()
             }
         case greenSlider:
-            model.setNewColor(green: CGFloat(sender.value)) { [weak self] in
+            model.setNewColorFrom(green: CGFloat(sender.value)) { [weak self] in
                 self?.updateUI()
             }
         case blueSlider:
-            model.setNewColor(blue: CGFloat(sender.value)) { [weak self] in
+            model.setNewColorFrom(blue: CGFloat(sender.value)) { [weak self] in
                 self?.updateUI()
             }
         default:
@@ -161,7 +161,7 @@ extension ColorPickerViewController {
         let green = (greenValue as NSString).floatValue
         let blue = (blueValue as NSString).floatValue
         
-        self.model.setNewColor(red: CGFloat(red), green: CGFloat(green), blue: CGFloat(blue)) {
+        self.model.setNewColorFrom(red: CGFloat(red), green: CGFloat(green), blue: CGFloat(blue)) {
             self.updateUI()
         }
     }

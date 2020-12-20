@@ -24,7 +24,7 @@ final class BackgroundColorModel {
         return (redValue, greenValue, blueValue)
     }
     
-    func setNewColor(
+    func setNewColorFrom(
         red: CGFloat? = nil,
         green: CGFloat? = nil,
         blue: CGFloat? = nil,
