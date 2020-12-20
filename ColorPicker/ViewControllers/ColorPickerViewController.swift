@@ -161,8 +161,8 @@ extension ColorPickerViewController {
         let green = (greenValue as NSString).floatValue
         let blue = (blueValue as NSString).floatValue
         
-        self.model.setNewColorFrom(red: CGFloat(red), green: CGFloat(green), blue: CGFloat(blue)) {
-            self.updateUI()
+        self.model.setNewColorFrom(red: CGFloat(red), green: CGFloat(green), blue: CGFloat(blue)) { [weak self] in
+            self?.updateUI()
         }
     }
 }
